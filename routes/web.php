@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('all_professors', [TeacherController::class, 'index'])->name('all_professors');
+Route::get('add_professors', [TeacherController::class, 'create'])->name('add_professors');
