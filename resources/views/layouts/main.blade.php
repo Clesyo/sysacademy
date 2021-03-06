@@ -488,5 +488,9 @@
 	<script src="{{asset('assets/plugins/summernote/summernote.js')}}"></script>
 	<script src="{{asset('assets/js/pages/summernote/summernote-data.js')}}"></script>
 	<!-- end js include path -->
+
+	@yield('javascript')
+
+	@yield('scripts')
 </body>
 </html>
