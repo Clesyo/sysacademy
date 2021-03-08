@@ -22,7 +22,7 @@ class CreateTeachersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('telephone')->nullable();
-            $table->string('mobile_phone');
+            $table->string('cell_phone');
             $table->string('photo')->nullable();
             $table->uuid('user_id')->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

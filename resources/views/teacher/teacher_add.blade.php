@@ -80,8 +80,8 @@
     
 @endsection
 
-@section('javascript')
+@section('js')
 <script src="{{asset('assets/js/pages/material-select/getmdl-select.js')}}"></script>
-<script src="{{asset('assets/plugins/flatpicker/js/flatpicker.min.js')}}"></script>
+{{-- <script src="{{asset('assets/plugins/flatpicker/js/flatpicker.min.js')}}"></script> --}}
 <script src="{{asset('assets/js/pages/date-time/date-time.init.js')}}"></script>
 @endsection
