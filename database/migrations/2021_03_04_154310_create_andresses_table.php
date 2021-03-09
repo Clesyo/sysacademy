@@ -21,6 +21,7 @@ class CreateAndressesTable extends Migration
             $table->string('zone');
             $table->string('locality');
             $table->string('disdrict');
+            $table->char('state', 2);
             $table->timestamps();
         });
     }

@@ -13,4 +13,21 @@ class Teacher extends Model
     protected $keyType = 'string';
     protected $uuidVersion = 3;
     public $incrementing = false;
+
+    protected $fillable = [
+        'id',
+        'name',
+        'document',
+        'joining_date',
+        'gender',
+        'registration',
+        'email',
+        'password',
+        'telephone',
+        'cell_phone',
+        'photo',
+        'andress_id',
+        'user_id',
+        'course_id'
+    ];
 }

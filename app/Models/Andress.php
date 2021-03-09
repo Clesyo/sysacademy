@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Andress extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'id',
+        'zip_code',
+        'andress',
+        'complement',
+        'district',
+        'zone',
+        'state'
+    ];
 }

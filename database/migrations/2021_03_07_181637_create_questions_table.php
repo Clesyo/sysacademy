@@ -17,6 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->string('description');
             $table->char('type',1);
+            $table->char('status', 1)->default(0);
             $table->timestamps();
         });
     }

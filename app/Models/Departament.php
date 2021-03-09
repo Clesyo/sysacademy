@@ -16,6 +16,6 @@ class Departament extends Model
 
     protected $fillable = [
         'id',
-        'description'
+        'name'
     ];
 }
