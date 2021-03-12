@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TeacherController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +27,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('all_professors', [TeacherController::class, 'index'])->name('all_professors');
 Route::get('add_professors', [TeacherController::class, 'create'])->name('add_professors');
+
+Route::get('all_permissions', [PermissionController::class, 'index'])->name('all_permissions');
+Route::get('permisson/new', [PermissionController::class, 'index'])->name('new_permission');
+
+
+Route::get('all_roles', [RoleController::class, 'index'])->name('all_roles');

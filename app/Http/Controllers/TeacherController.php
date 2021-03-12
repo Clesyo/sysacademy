@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Andress;
+use App\Models\Student;
 use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -60,9 +61,15 @@ class TeacherController extends Controller
 
         unset($datas['user']);
         unset($datas['andress']);
+        do {
+            $registration = rand(10, 10000);
+            $registerAldeadyExists = Student::where('registration', $registration)->first();
+        } while ($registerAldeadyExists != null);
+
         $datas = [
             'user_id' => $user->id,
-            'andress_id' => $andress->id
+            'andress_id' => $andress->id,
+            'registration' => $registration
         ];
         $teacher = $teacher::create($datas);
 

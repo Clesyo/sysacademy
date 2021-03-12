@@ -17,6 +17,7 @@ class CreateTeachersTable extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->string('document');
+            $table->string('registration')->unique();
             $table->date('joining_date');
             $table->char('gender', 1);
             $table->string('email')->unique();
